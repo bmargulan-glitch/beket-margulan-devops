@@ -1,0 +1,6 @@
+.git
+backup/
+logs/
+*.log
+.env
+private.txt

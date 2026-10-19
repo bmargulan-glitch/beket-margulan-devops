@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: beket-margulan-devops
+    container_name: beket-margulan-compose
+    environment:
+      STUDENT_NAME: ${STUDENT_NAME:-Margulan}
+      STUDENT_SURNAME: ${STUDENT_SURNAME:-Beket}
+      STUDENT_GROUP: ${STUDENT_GROUP:-it2-2302}
+      STUDENT_ID: ${STUDENT_ID:-38109}
+    ports:
+      - "5050:5050"
+    restart: unless-stopped
