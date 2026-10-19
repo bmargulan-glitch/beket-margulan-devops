@@ -28,6 +28,7 @@ echo "$line"
 echo
 echo "Username: $(whoami)"
 echo "Hostname: $(hostname 2>/dev/null || cat /etc/hostname)"
+echo "Uptime: $(uptime -p 2>/dev/null || uptime)"
 echo "Current Date: $(date '+%Y-%m-%d %H:%M:%S')"
 echo "Operating System: $(uname -s -r -m)"
 echo "Disk Usage: $(df -h / | awk 'NR==2 {print $3 " used of " $2 " (" $5 ")"}')"
